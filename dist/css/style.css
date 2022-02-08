@@ -99,8 +99,8 @@ nav {
   position: relative;
   font-size: 0.875rem;
   color: #9698a6;
-  -webkit-transition: color 200ms ease-in-out;
-  transition: color 200ms ease-in-out;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
 }
 
 .header__links a:not(:last-child) {
@@ -112,18 +112,32 @@ nav {
   position: absolute;
   display: block;
   height: 5px;
-  background: lime;
+  background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background: linear-gradient(to right, #31d35c, #2bb7da);
   left: 0;
   right: 0;
   bottom: -30px;
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
 }
 
 .header__links a:hover {
   color: #2d314d;
 }
 
+.header__links a:hover::before {
+  opacity: 1;
+}
+
 .header__cta {
   font-size: 0.875rem;
   color: white;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+.header__cta:hover {
+  opacity: 0.75;
 }
 /*# sourceMappingURL=style.css.map */
