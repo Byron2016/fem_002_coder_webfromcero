@@ -53,7 +53,7 @@ a:hover {
 
 button,
 .button {
-  padding: 1rem 1.875rem;
+  padding: 0.875rem 2.1875rem;
   background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
   background: linear-gradient(to right, #31d35c, #2bb7da);
   border: 0;
@@ -76,7 +76,12 @@ button,
 }
 
 nav {
-  padding: 24px;
+  padding: 1.065rem 1.5rem;
+}
+
+.header__logo img {
+  width: 8.125rem;
+  height: 1.375rem;
 }
 
 .header__menu > span {
@@ -91,8 +96,30 @@ nav {
 }
 
 .header__links a {
+  position: relative;
   font-size: 0.875rem;
   color: #9698a6;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+}
+
+.header__links a:not(:last-child) {
+  margin-right: 32px;
+}
+
+.header__links a::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 5px;
+  background: lime;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+}
+
+.header__links a:hover {
+  color: #2d314d;
 }
 
 .header__cta {

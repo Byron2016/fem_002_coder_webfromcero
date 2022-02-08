@@ -1,12 +1,14 @@
 nav {
-  padding: 24px;
+  padding: 1.065rem 1.5rem;
 }
 
 .header {
+  // border: 1px solid blue; //p1 44.33
   &__logo {
 
     img {
-
+      width: 8.125rem; //p1 40.15
+      height: 1.375rem;
     }
   }
 
@@ -24,9 +26,35 @@ nav {
   }
 
   &__links {
+    // border: 1px solid red;
+
     a {
+      position: relative; //45.08 barra debajo cada link
+
       font-size: $font-sm;
       color: $grayishBlue;
+      transition: color 200ms ease-in-out;
+
+      &:not(:last-child){
+        margin-right: 32px;
+      }
+
+      // 45.08 barra debajo cada link
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        // width: 100%;
+        height: 5px;
+        background: lime;
+        left: 0;
+        right: 0;
+        bottom: -30px;
+      }
+
+      &:hover {
+        color: $darkBlue; //p1 42.14
+      }
     }
   }
 
