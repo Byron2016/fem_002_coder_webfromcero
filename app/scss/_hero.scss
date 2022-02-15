@@ -1,8 +1,13 @@
 .hero {
-  @include breakpoint-up(large) {
-    display: flex;
-    align-items: center;
+  background-color: $veryLightGray;
+
+  .container {
+    @include breakpoint-up(large) {
+      display: flex;
+      align-items: center;
+    }
   }
+  
 
   &__image {
     // border: 1px solid magenta; //p4 11.20
